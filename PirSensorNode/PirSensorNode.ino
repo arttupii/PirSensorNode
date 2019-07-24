@@ -52,11 +52,7 @@ void setup() {
   }
 
   //Handle MQTT events from master. Do not call publish inside of call back. --> Endless event loop and crash
-  simpleMqtt.handleSubscribeAndGetEvents([](const char *topic, const char* value) {
-  });
-
-  //Handle MQTT events from master
-  simpleMqtt.handlePublishEvents([](const char *topic, const char* value) {
+  simpleMqtt.handleEvents([](const char *topic, const char* value) {
   });
 
   /*if (!simpleMqtt.publish(deviceName, "/trigger/pirSensor1/value", "on")) {
