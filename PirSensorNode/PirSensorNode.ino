@@ -59,7 +59,7 @@ void setup() {
   simpleMqtt.handlePublishEvents([](const char *topic, const char* value) {
   });
 
-  if (!simpleMqtt.publish(deviceName, "/trigger/olohuone/value", "on")) {
+  if (!simpleMqtt.publish(deviceName, "/trigger/pir1/value", "on")) {
     Serial.println("Publish failed... Reboot");
     deepSleepMode(); //Perhaps this works in the next time. Let's go to sleep
   }
