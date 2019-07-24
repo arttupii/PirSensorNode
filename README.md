@@ -1,11 +1,11 @@
-PIR sensor to mesh network
+# PIR sensor to flooding mesh network
 
 
 Based on EspNowFloodingMesh project:
-https://github.com/arttupii/EspNowFloodingMesh
+* https://github.com/arttupii/EspNowFloodingMesh
 
 
-
+```
         +--------------------------+
         |   ESP01                  |
         |                          |
@@ -44,8 +44,8 @@ https://github.com/arttupii/EspNowFloodingMesh
 6 RESET
 7 GPIO03
 8 VCC
-
+```
 Links:
-  https://www.banggood.com/Mini-IR-Pyroelectric-Infrared-PIR-Motion-Human-Body-Sensor-Detector-Module-p-1424839.html?rmmds=search&cur_warehouse=CN
-  https://www.banggood.com/Upgraded-Version-1M-Flash-ESP8266-ESP-01-WIFI-Transceiver-Wireless-Module-p-979509.html?rmmds=search&cur_warehouse=UK
-  https://www.banggood.com/1-Slots-AA-Battery-Holder-Plastic-Case-Storage-Box-for-1AA-Battery-p-1472098.html?rmmds=search&cur_warehouse=CN
+  * https://www.banggood.com/Mini-IR-Pyroelectric-Infrared-PIR-Motion-Human-Body-Sensor-Detector-Module-p-1424839.html?rmmds=search&cur_warehouse=CN
+  * https://www.banggood.com/Upgraded-Version-1M-Flash-ESP8266-ESP-01-WIFI-Transceiver-Wireless-Module-p-979509.html?rmmds=search&cur_warehouse=UK
+  * https://www.banggood.com/1-Slots-AA-Battery-Holder-Plastic-Case-Storage-Box-for-1AA-Battery-p-1472098.html?rmmds=search&cur_warehouse=CN
