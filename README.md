@@ -4,6 +4,7 @@
 Based on EspNowFloodingMesh project:
 * https://github.com/arttupii/EspNowFloodingMesh
 
+![alt text](https://raw.githubusercontent.com/arttupii/PirSendorNode/master/PirSensor.png)
 
 ```
         +--------------------------+
