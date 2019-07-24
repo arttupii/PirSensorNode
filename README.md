@@ -16,7 +16,7 @@ Based on EspNowFloodingMesh project:
         |                          |          |                |  
         |                          |          |           +----------+
         |                          |          |           |  VCC     |
-        |   1     3     5     7    |      ---------       |          |
+        |   1     3     5     7    |      ---------       |          | Set time setting to about 2min (trimmer potentiometer) 
   +---------+-+   +-+   +-+   +-+  |        ----- 1.5V    |          |
   |     |   +-+   +-+   +-+   +-+  |          |           |PIR-SENSOR|
   |     |                |         |          |           |          |
