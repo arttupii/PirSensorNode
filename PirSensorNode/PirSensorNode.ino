@@ -21,7 +21,7 @@ void espNowFloodingMeshRecv(const uint8_t *data, int len, uint32_t replyPrt) {
 }
 
 void deepSleepMode(){
-  ESP.deepSleep(0);  
+  ESP.deepSleep(0);
 }
 
 bool setLed;
@@ -31,7 +31,7 @@ void setup() {
 
   pinMode(LED, OUTPUT);
   digitalWrite(LED, HIGH);
-  
+
   //Set device in AP mode to begin with
   espNowFloodingMesh_RecvCB(espNowFloodingMeshRecv);
   espNowFloodingMesh_secredkey(secredKey);
@@ -59,12 +59,16 @@ void setup() {
   simpleMqtt.handlePublishEvents([](const char *topic, const char* value) {
   });
 
-  if (!simpleMqtt.publish(deviceName, "/trigger/pir1/value", "on")) {
+  /*if (!simpleMqtt.publish(deviceName, "/trigger/pirSensor1/value", "on")) {
+    Serial.println("Publish failed... Reboot");
+    deepSleepMode(); //Perhaps this works in the next time. Let's go to sleep
+  }*/
+  if (!simpleMqtt._trigger(PUBLISH, "pirSensor1", TRIGGER_ON)) { //Same as the upper but the smarter way
     Serial.println("Publish failed... Reboot");
     deepSleepMode(); //Perhaps this works in the next time. Let's go to sleep
   }
   Serial.println("Alarm has been published succesfully!!");
-  deepSleepMode(); 
+  deepSleepMode();
 }
 
 void loop() {
