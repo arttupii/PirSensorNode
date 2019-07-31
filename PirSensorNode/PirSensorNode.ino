@@ -4,7 +4,7 @@
 /********NODE SETUP********/
 #define ESP_NOW_CHANNEL 1
 const char deviceName[] = "PirOlohuone1";
-int bsid = 0x112233;
+//int bsid = 0x112233;
 //unsigned char secredKey[16] = {0x00, 0x11, 0x22, 0x33, 0x44, 0x55, 0x66, 0x77, 0x88, 0x99, 0xAA, 0xBB, 0xCC, 0xDD, 0xEE, 0xFF};
 //unsigned char iv[16] = {0xb2, 0x4b, 0xf2, 0xf7, 0x7a, 0xc5, 0xec, 0x0c, 0x5e, 0x1f, 0x4d, 0xc1, 0xae, 0x46, 0x5e, 0x75};;
 //const int ttl = 3;
@@ -22,7 +22,7 @@ void espNowFloodingMeshRecv(const uint8_t *data, int len, uint32_t replyPrt) {
 }
 
 void deepSleepMode(){
-  ESP.deepSleep(0);
+ // ESP.deepSleep(0);
 }
 
 bool setLed;
@@ -60,7 +60,7 @@ void setup() {
     Serial.println("Publish failed... Reboot");
     deepSleepMode(); //Perhaps this works in the next time. Let's go to sleep
   }*/
-  if (!simpleMqtt._trigger(PUBLISH, "pirSensor1", TRIGGER_ON)) { //Same as the upper but the smarter way
+  if (!simpleMqtt._trigger(PUBLISH, "pirSensor1", TRIGGERED)) { //Same as the upper but the smarter way
     Serial.println("Publish failed... Reboot");
     deepSleepMode(); //Perhaps this works in the next time. Let's go to sleep
   }
