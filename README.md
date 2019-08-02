@@ -1,7 +1,7 @@
 # PIR sensor to flooding mesh network
 
 
-Based on EspNowFloodingMesh project:
+Part of EspNowFloodingMesh project:
 * https://github.com/arttupii/EspNowFloodingMesh
 
 ![alt text](https://raw.githubusercontent.com/arttupii/PirSendorNode/master/PirSensor.png)
