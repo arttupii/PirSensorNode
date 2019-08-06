@@ -22,7 +22,7 @@ void espNowFloodingMeshRecv(const uint8_t *data, int len, uint32_t replyPrt) {
 }
 
 void deepSleepMode(){
- // ESP.deepSleep(0);
+ ESP.deepSleep(0);
 }
 
 bool setLed;
@@ -52,15 +52,14 @@ void setup() {
     deepSleepMode(); //Perhaps this works in the next time. Let's go to sleep
   }
 
-  //Handle MQTT events from master. Do not call publish inside of call back. --> Endless event loop and crash
   simpleMqtt.handleEvents([](const char *topic, const char* value) {
   });
 
-  /*if (!simpleMqtt.publish(deviceName, "/trigger/pirSensor1/value", "on")) {
+  /*if (!simpleMqtt.publish(deviceName, "/trigger/pirSensor1/value", "triggered")) {
     Serial.println("Publish failed... Reboot");
     deepSleepMode(); //Perhaps this works in the next time. Let's go to sleep
   }*/
-  if (!simpleMqtt._trigger(PUBLISH, "pirSensor1", TRIGGERED)) { //Same as the upper but the smarter way
+  if (!simpleMqtt._trigger(PUBLISH, "pirSensor1", TRIGGERED)) { //Same as the above but the smarter way
     Serial.println("Publish failed... Reboot");
     deepSleepMode(); //Perhaps this works in the next time. Let's go to sleep
   }
