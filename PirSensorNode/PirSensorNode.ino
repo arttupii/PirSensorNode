@@ -52,9 +52,6 @@ void setup() {
     deepSleepMode(); //Perhaps this works in the next time. Let's go to sleep
   }
 
-  simpleMqtt.handleEvents([](const char *topic, const char* value) {
-  });
-
   /*if (!simpleMqtt.publish(deviceName, "/trigger/pirSensor1/value", "triggered")) {
     Serial.println("Publish failed... Reboot");
     deepSleepMode(); //Perhaps this works in the next time. Let's go to sleep
